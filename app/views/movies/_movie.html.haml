@@ -1,0 +1,8 @@
+%tr
+  %td= index
+  %td= movie.title
+  %td= movie.rating
+  %td= movie.release_date
+  %td= link_to "more about #{movie.title}", movie_path
+  %td= link_to "Edit Movie #{movie.title}", edit_movie_path(movie)
+  %td= button_to "Delete", movie_path(movie), :method => :delete, :confirm => "Are you sure?"
